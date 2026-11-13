@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='utf-8'?>
+<issues format="6" by="lint 8.8.0" type="baseline" client="gradle">
+    <!-- Inherited errors only: every referenced file was byte-for-byte unchanged from Tempo base 9cf62c8c. See docs/SPOTUI-INTEGRATION.md. -->
+    <issue id="RecyclerView" message="Do not treat position as fixed; only use immediately and call `holder.getAdapterPosition()` to look it up later" errorLine1="    public void onBindViewHolder(ViewHolder holder, int position) {" errorLine2="                                                    ~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/ui/adapter/PlayerSongQueueAdapter.java" line="48" column="53" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;700&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="10" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;700&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="16" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;700&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="22" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;700&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="29" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;400&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="35" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;400&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="41" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;700&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="48" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;700&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="54" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;500&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="60" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;400&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="66" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;300&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="72" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;700&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="79" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;500&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="85" column="15" />
+    </issue>
+    <issue id="NewApi" message="`android:textFontWeight` requires API level 28 (current min is 24)" errorLine1="        &lt;item name=&quot;android:textFontWeight&quot;&gt;400&lt;/item&gt;" errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/typography.xml" line="91" column="15" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="99" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="132" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="165" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                    listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="195" column="64" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="245" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="298" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="346" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="525" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="578" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="629" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                            listenableFuture.set(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE));" errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="662" column="72" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: LibraryResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="                return Futures.immediateFuture(LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE))" errorLine2="                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/tempo/java/com/cappielloantonio/tempo/service/MediaBrowserTree.kt" line="461" column="70" />
+    </issue>
+    <issue id="WrongConstant" message="Must be one of: SessionResult.RESULT_SUCCESS, SessionError.INFO_CANCELLED, SessionError.ERROR_UNKNOWN, SessionError.ERROR_INVALID_STATE, SessionError.ERROR_BAD_VALUE, SessionError.ERROR_PERMISSION_DENIED, SessionError.ERROR_IO, SessionError.ERROR_SESSION_DISCONNECTED, SessionError.ERROR_NOT_SUPPORTED, SessionError.ERROR_SESSION_AUTHENTICATION_EXPIRED, SessionError.ERROR_SESSION_PREMIUM_ACCOUNT_REQUIRED, SessionError.ERROR_SESSION_CONCURRENT_STREAM_LIMIT, SessionError.ERROR_SESSION_PARENTAL_CONTROL_RESTRICTED, SessionError.ERROR_SESSION_NOT_AVAILABLE_IN_REGION, SessionError.ERROR_SESSION_SKIP_LIMIT_REACHED, SessionError.ERROR_SESSION_SETUP_REQUIRED" errorLine1="        return Futures.immediateFuture(SessionResult(SessionResult.RESULT_ERROR_NOT_SUPPORTED))" errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/tempo/java/com/cappielloantonio/tempo/service/MediaLibraryServiceCallback.kt" line="101" column="54" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final SessionMediaItemDao sessionMediaItemDao = AppDatabase.getInstance().sessionMediaItemDao();" errorLine2="                                                                        ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="55" column="73" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final SessionMediaItemDao sessionMediaItemDao = AppDatabase.getInstance().sessionMediaItemDao();" errorLine2="                                                                                      ~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="55" column="87" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final ChronologyDao chronologyDao = AppDatabase.getInstance().chronologyDao();" errorLine2="                                                            ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="56" column="61" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final ChronologyDao chronologyDao = AppDatabase.getInstance().chronologyDao();" errorLine2="                                                                          ~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="56" column="75" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    public SessionMediaItem getSessionMediaItem(String id) {" errorLine2="           ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="917" column="12" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="        SessionMediaItem sessionMediaItem = null;" errorLine2="        ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="918" column="9" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="        private SessionMediaItem sessionMediaItem;" errorLine2="                ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="961" column="17" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="        public SessionMediaItem getSessionMediaItem() {" errorLine2="               ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="973" column="16" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="        private final List&lt;SessionMediaItem&gt; sessionMediaItems;" errorLine2="                           ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="1002" column="28" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="        public InsertAllThreadSafe(SessionMediaItemDao sessionMediaItemDao, List&lt;SessionMediaItem&gt; sessionMediaItems) {" errorLine2="                                                                                 ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/AutomotiveRepository.java" line="1004" column="82" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final ChronologyDao chronologyDao = AppDatabase.getInstance().chronologyDao();" errorLine2="                                                            ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/ChronologyRepository.java" line="13" column="61" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final ChronologyDao chronologyDao = AppDatabase.getInstance().chronologyDao();" errorLine2="                                                                          ~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/ChronologyRepository.java" line="13" column="75" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final DownloadDao downloadDao = AppDatabase.getInstance().downloadDao();" errorLine2="                                                        ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/DownloadRepository.java" line="15" column="57" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final DownloadDao downloadDao = AppDatabase.getInstance().downloadDao();" errorLine2="                                                                      ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/DownloadRepository.java" line="15" column="71" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final FavoriteDao favoriteDao = AppDatabase.getInstance().favoriteDao();" errorLine2="                                                        ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/FavoriteRepository.java" line="20" column="57" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final FavoriteDao favoriteDao = AppDatabase.getInstance().favoriteDao();" errorLine2="                                                                      ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/FavoriteRepository.java" line="20" column="71" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="                val sessionMediaItem = automotiveRepository.getSessionMediaItem(it.mediaId)" errorLine2="                    ~~~~~~~~~~~~~~~~">
+        <location file="src/tempo/java/com/cappielloantonio/tempo/service/MediaBrowserTree.kt" line="474" column="21" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final PlaylistDao playlistDao = AppDatabase.getInstance().playlistDao();" errorLine2="                                                        ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/PlaylistRepository.java" line="23" column="57" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final PlaylistDao playlistDao = AppDatabase.getInstance().playlistDao();" errorLine2="                                                                      ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/PlaylistRepository.java" line="23" column="71" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final QueueDao queueDao = AppDatabase.getInstance().queueDao();" errorLine2="                                                  ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/QueueRepository.java" line="26" column="51" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final QueueDao queueDao = AppDatabase.getInstance().queueDao();" errorLine2="                                                                ~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/QueueRepository.java" line="26" column="65" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final RecentSearchDao recentSearchDao = AppDatabase.getInstance().recentSearchDao();" errorLine2="                                                                ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/SearchingRepository.java" line="26" column="65" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final RecentSearchDao recentSearchDao = AppDatabase.getInstance().recentSearchDao();" errorLine2="                                                                              ~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/SearchingRepository.java" line="26" column="79" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final ServerDao serverDao = AppDatabase.getInstance().serverDao();" errorLine2="                                                    ~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/ServerRepository.java" line="14" column="53" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    private final ServerDao serverDao = AppDatabase.getInstance().serverDao();" errorLine2="                                                                  ~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/repository/ServerRepository.java" line="14" column="67" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    SessionMediaItem get(String id);" errorLine2="    ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/database/dao/SessionMediaItemDao.java" line="16" column="5" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    List&lt;SessionMediaItem&gt; get(long timestamp);" errorLine2="         ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/database/dao/SessionMediaItemDao.java" line="19" column="10" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    void insert(SessionMediaItem sessionMediaItem);" errorLine2="                ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/database/dao/SessionMediaItemDao.java" line="22" column="17" />
+    </issue>
+    <issue id="UnsafeOptInUsageError" message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`" errorLine1="    void insertAll(List&lt;SessionMediaItem&gt; sessionMediaItems);" errorLine2="                        ~~~~~~~~~~~~~~~~">
+        <location file="src/main/java/com/cappielloantonio/tempo/database/dao/SessionMediaItemDao.java" line="25" column="25" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;album_page_release_date_label&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;album_page_release_date_label&quot;&gt;Released on %1$s&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="26" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;album_page_release_dates_label&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;album_page_release_dates_label&quot;&gt;Released on %1$s, originally %2$s&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="27" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;album_page_tracks_count_and_duration&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;album_page_tracks_count_and_duration&quot;&gt;%1$d songs  •  %2$d minutes&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="29" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;content_description_shuffle_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;content_description_shuffle_button&quot;&gt;Shuffle&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="58" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;disc_titlefull&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;disc_titlefull&quot;&gt;Disc %1$s - %2$s&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="64" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;disc_titleless&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;disc_titleless&quot;&gt;Disc %1$s&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="65" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;download_shuffle_all_subtitle&quot; is not translated in &quot;ko&quot; (Korean) or &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;download_shuffle_all_subtitle&quot;&gt;Shuffle all&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="74" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;generic_list_page_count&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;generic_list_page_count&quot;&gt;(%1$d)&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="93" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;generic_list_page_count_unknown&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;generic_list_page_count_unknown&quot;&gt;(+%1$d)&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="94" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;github_update_dialog_negative_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;github_update_dialog_negative_button&quot;&gt;Remind me later&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="97" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;github_update_dialog_neutral_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;github_update_dialog_neutral_button&quot;&gt;Support me&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="98" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;github_update_dialog_positive_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;github_update_dialog_positive_button&quot;&gt;Download now&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="99" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;github_update_dialog_summary&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;github_update_dialog_summary&quot;&gt;There is a new version of the app available on Github.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="100" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;github_update_dialog_title&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;github_update_dialog_title&quot;&gt;Update available&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="101" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_rearrangement_dialog_negative_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;home_rearrangement_dialog_negative_button&quot;&gt;Cancel&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="102" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_rearrangement_dialog_neutral_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;home_rearrangement_dialog_neutral_button&quot;&gt;Reset&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="103" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_rearrangement_dialog_positive_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;home_rearrangement_dialog_positive_button&quot;&gt;Save&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="104" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_rearrangement_dialog_title&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;home_rearrangement_dialog_title&quot;&gt;Rearrange home&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="105" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_rearrangement_dialog_subtitle&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;home_rearrangement_dialog_subtitle&quot;&gt;Please note that in order for the changes made to take effect, it is necessary to restart the application.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="106" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_title_last_month&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;home_title_last_month&quot;&gt;Last month&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="123" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_title_last_year&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;home_title_last_year&quot;&gt;Last year&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="124" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_title_pinned_playlists&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;home_title_pinned_playlists&quot;&gt;Playlists&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="130" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;home_option_reorganize&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;home_option_reorganize&quot;&gt;Reorganize&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="144" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_last_week_name&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;menu_last_week_name&quot;&gt;Last week&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="171" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_last_month_name&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;menu_last_month_name&quot;&gt;Last month&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="172" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_last_year_name&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;menu_last_year_name&quot;&gt;Last year&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="173" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_sort_recently_added&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;menu_sort_recently_added&quot;&gt;Recently added&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="180" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_sort_recently_played&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;menu_sort_recently_played&quot;&gt;Recently played&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="181" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_sort_most_played&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;menu_sort_most_played&quot;&gt;Most played&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="182" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_sort_most_recently_starred&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;menu_sort_most_recently_starred&quot;&gt;Most recently starred&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="183" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_sort_least_recently_starred&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;menu_sort_least_recently_starred&quot;&gt;Least recently starred&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="184" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_pin_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;menu_pin_button&quot;&gt;Add to home screen&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="185" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;menu_unpin_button&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;menu_unpin_button&quot;&gt;Remove from home screen&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="186" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;playlist_editor_dialog_action_delete_toast&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;playlist_editor_dialog_action_delete_toast&quot;&gt;Long press to delete&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="199" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;server_signup_dialog_action_delete_toast&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;server_signup_dialog_action_delete_toast&quot;&gt;Long press to delete&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="245" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;server_signup_dialog_hint_local_address&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;server_signup_dialog_hint_local_address&quot;&gt;Local URL&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="246" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_always_on_display&quot; is not translated in &quot;ko&quot; (Korean) or &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_always_on_display&quot;&gt;Always on display&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="262" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_continuous_play_summary&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_continuous_play_summary&quot;&gt;Allows music to keep playing after a playlist has ended, playing similar songs&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="278" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_continuous_play_title&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_continuous_play_title&quot;&gt;Continuous play&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="279" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_audio_quality&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_audio_quality&quot;&gt;Show audio quality&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="302" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_audio_quality_summary&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_audio_quality_summary&quot;&gt;The bitrate and audio format will be shown for each audio track.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="303" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_item_rating&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_item_rating&quot;&gt;Show item rating&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="304" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_item_rating_summary&quot; is not translated in &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_item_rating_summary&quot;&gt;If enabled, the item\'s rating and whether it is marked as a favorite will be displayed.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="305" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_streaming_cache_size&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_streaming_cache_size&quot;&gt;Size of streaming cache&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="319" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_streaming_cache_storage_title&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;settings_streaming_cache_storage_title&quot;&gt;Streaming cache storage&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="320" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_summary_streaming_cache_size&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;settings_summary_streaming_cache_size&quot;&gt;%1$s \nCurrently in use:   %2$s MiB&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="327" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;settings_title_skip_min_star_rating_dialog&quot; is not translated in &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;settings_title_skip_min_star_rating_dialog&quot;&gt;Songs with a rating of:&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="340" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;streaming_cache_storage_dialog_sub_summary&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;streaming_cache_storage_dialog_sub_summary&quot;&gt;For the changes to take effect, restart the app.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="386" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;streaming_cache_storage_dialog_summary&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;streaming_cache_storage_dialog_summary&quot;&gt;Changing the destination of cached files from one storage to another may result in the deletion of any previously cached files in the other storage.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="387" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;streaming_cache_storage_dialog_title&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;streaming_cache_storage_dialog_title&quot;&gt;Select storage option&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="388" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;streaming_cache_storage_external_dialog_positive_button&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;streaming_cache_storage_external_dialog_positive_button&quot;&gt;External&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="389" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;streaming_cache_storage_internal_dialog_negative_button&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French)" errorLine1="    &lt;string name=&quot;streaming_cache_storage_internal_dialog_negative_button&quot;&gt;Internal&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="390" column="13" />
+    </issue>
+    <issue id="MissingTranslation" message="&quot;support_url&quot; is not translated in &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;support_url&quot;&gt;https://buymeacoffee.com/a.cappiello&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location file="src/main/res/values/strings.xml" line="391" column="13" />
+    </issue>
+</issues>

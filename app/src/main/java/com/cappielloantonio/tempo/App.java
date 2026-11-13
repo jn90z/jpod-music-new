@@ -25,7 +25,8 @@ public class App extends Application {
         super.onCreate();
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String themePref = sharedPreferences.getString(Preferences.THEME, ThemeHelper.DEFAULT_MODE);
+        String themePref = sharedPreferences.getString(Preferences.THEME,
+                BuildConfig.FLAVOR.equals("jpod") ? ThemeHelper.DARK_MODE : ThemeHelper.DEFAULT_MODE);
         ThemeHelper.applyTheme(themePref);
 
         instance = new App();

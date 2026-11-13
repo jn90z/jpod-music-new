@@ -1,90 +1,78 @@
-<p align="center">
-  <img alt="Tempo" title="Tempo" src="mockup/svg/horizontal_logo.svg" width="250">
-</p>
+# J-Pod Music — Tempo + a Spotui-style interface
 
-<p align="center">
-  <b>Access your music library on all your android devices</b>
-</p>
+Android client for your own **Raspberry Pi + Navidrome + Tailscale** music library.
+This branch keeps Tempo's working Subsonic/OpenSubsonic client, Media3 playback,
+downloads and Android Auto integration, and starts a Spotui UI port on top.
 
-<p align="center">
-    <a href="https://github.com/CappielloAntonio/tempo/releases"><img src="https://i.ibb.co/q0mdc4Z/get-it-on-github.png" width="200"></a>
-</p>
-<p align="center">
-    <a href="https://f-droid.org/packages/com.cappielloantonio.notquitemy.tempo"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="200"></a>
-    <a href="https://apt.izzysoft.de/fdroid/index/apk/com.cappielloantonio.tempo"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" width="200"></a>
-</p>
+**Status: integration preview, not a complete port of every Spotui screen.**
+The new Compose home feed and navigation are implemented; library, search,
+album/artist/playlist detail, player, lyrics, queue, downloads and settings still
+use Tempo's functional screens with a shared J-Pod dark/green theme. The Explore
+home tab preserves Tempo's richer discovery, history and playlist actions while
+those screens are ported. See [the feature map](docs/SPOTUI-INTEGRATION.md).
 
-**Tempo** is an open-source and lightweight music client for Subsonic, designed and built natively for Android. It provides a seamless and intuitive music streaming experience, allowing you to access and play your Subsonic music library directly from your Android device. 
+## Browse Artists and Songs
 
-Tempo does not rely on magic algorithms to decide what you should listen to. Instead, the interface is built around your listening history, randomness, and optionally integrates with services like Last.fm to personalize your music experience.
+On **Home → For you**, use the **Artists** and **Songs** buttons:
 
-**If you find Tempo useful, please consider starring the project on GitHub. It would mean a lot to me and help promote the app to a wider audience.**
+- **Artists** shows an alphabetical list with a search bar pinned at the top.
+  Tap an artist to see song titles from all their albums, with another search bar.
+- **Songs** shows the complete song catalogue, loaded in pages. Search filters
+  titles, artist names and album names as you type; Clear restores the full list.
+- Tap a song to play it and continue through the visible list. Long-press for
+  existing song actions. Refresh reloads the catalogue. Loading progress and
+  incomplete-list errors are shown explicitly.
 
-**Use the Github version of the app for full Android Auto and Chromecast support.**
+Filtering runs locally off the UI thread; typing does not send a request for each
+keystroke. Lists render only visible rows to support large libraries.
 
-## Features
-- **Subsonic Integration**: Tempo seamlessly integrates with your Subsonic server, providing you with easy access to your entire music collection on the go.
-- **Sleek and Intuitive UI**: Enjoy a clean and user-friendly interface designed to enhance your music listening experience, tailored to your preferences and listening history.
-- **Browse and Search**: Easily navigate through your music library using various browsing and searching options, including artists, albums, genres, playlists, decades and more.
-- **Streaming and Offline Mode**: Stream music directly from your Subsonic server. Offline mode is currently under active development and may have limitations when using multiple servers.
-- **Playlist Management**: Create, edit, and manage playlists to curate your perfect music collection.
-- **Gapless Playback**: Experience uninterrupted playback with gapless listening mode.
-- **Chromecast Support**: Stream your music to Chromecast devices. The support is currently in a rudimentary state.
-- **Scrobbling Integration**: Optionally integrate Tempo with Last.fm to scrobble your played tracks, gather music insights, and further personalize your music recommendations, if supported by your Subsonic server.
-- **Podcasts and Radio**: If your Subsonic server supports it, listen to podcasts and radio shows directly within Tempo, expanding your audio entertainment options.
-- **Transcoding Support**: Activate transcoding of tracks on your Subsonic server, allowing you to set a transcoding profile for optimized streaming directly from the app. This feature requires support from your Subsonic server.
-- **Android Auto Support**: Enjoy your favorite music on the go with full Android Auto integration, allowing you to seamlessly control and listen to your tracks directly from your mobile device while driving.
+## Build and install
 
-<p align="center">
-    <img src="mockup/feat/1_screenshot.png" width=200>
-    <img src="mockup/feat/2_screenshot.png" width=200>
-    <img src="mockup/feat/3_screenshot.png" width=200>
-    <img src="mockup/feat/4_screenshot.png" width=200>
-    <img src="mockup/feat/5_screenshot.png" width=200>
-    <img src="mockup/feat/6_screenshot.png" width=200>
-    <img src="mockup/feat/7_screenshot.png" width=200>
-    <img src="mockup/feat/8_screenshot.png" width=200>
-</p>
+Requires JDK 17 (or 21), Android SDK platform 35 and build tools 35.0.0.
+In Android Studio, select the **jpodDebug** build variant. From the command line:
 
-## Sponsors
-Tempo is an open-source project developed and maintained solely by me. I would like to express my heartfelt thanks to all the users who have shown their love and support for Tempo. Your contributions and encouragement mean a lot to me, and they help drive the development and improvement of the app.
+```sh
+./gradlew :app:assembleJpodDebug
+```
 
-If you would like to sponsor the project and show your support, you can make a donation or contribution by visiting the [**sponsorship page**](https://www.buymeacoffee.com/a.cappiello). Your generosity will help cover the costs of development and further enhancements.
+Install `app/build/outputs/apk/jpod/debug/app-jpod-debug.apk` on Android 7+.
+The application ID is `com.jn90z.jpod`, so this installs alongside Tempo.
+Accounts/downloads do not automatically migrate from Tempo's separate sandbox.
+Debug builds are for testing; stable upgrades require a consistent signing key.
+GitHub Actions builds and uploads a debug APK on pushes to this branch.
 
-## Screenshot
+## Connect your J-Pod
 
-<p align="center">
-  <b>Light theme</b>
-</p>
+1. Connect **Tailscale on your phone** to the same tailnet as the Raspberry Pi.
+2. In J-Pod's server login, enter your Navidrome address, for example
+   `http://YOUR_PI_TAILSCALE_IP:4533` (or your existing working MagicDNS/HTTPS URL).
+3. Enter your **Navidrome** username and password, the same credentials used in
+   Tempo. These are not your Raspberry Pi or Tailscale account credentials.
+4. Browse, search and play. Use the home Downloads shortcut or bottom tab for
+   offline music. Long-press an album or song for Tempo's existing actions.
 
-<p align="center">
-    <img src="mockup/light/1_screenshot.png" width=200>
-    <img src="mockup/light/2_screenshot.png" width=200>
-    <img src="mockup/light/3_screenshot.png" width=200>
-    <img src="mockup/light/4_screenshot.png" width=200>
-    <img src="mockup/light/5_screenshot.png" width=200>
-    <img src="mockup/light/6_screenshot.png" width=200>
-    <img src="mockup/light/7_screenshot.png" width=200>
-    <img src="mockup/light/8_screenshot.png" width=200>
-</p>
+Tailscale runs separately on the phone; the app does not configure or embed a VPN.
+HTTP is supported for Navidrome inside your encrypted tailnet. No Pi changes,
+router port forwarding, Spotify account or Spotify application keys are required.
+Server instructions: [jn90z/j-pod](https://github.com/jn90z/j-pod).
 
-<br>
+## Source layout
 
-<p align="center">
-  <b>Dark theme</b>
-</p>
+- `app/src/main`: Tempo foundation and new Compose home (`ui/jpod`).
+- `app/src/tempo/java`: reused playback service, Android Auto browsing and toolbar.
+- `app/src/jpod/res`: J-Pod branding and Spotui-style navigation/theme overlays.
+- `upstream/spotui`: full pinned upstream source snapshot for further UI porting.
+  **It is not a Gradle module or a packaged part of J-Pod.** Its Spotify, YouTube,
+  Deezer, Soulseek and other providers are not wired into this application.
 
-<p align="center">
-    <img src="mockup/dark/1_screenshot.png" width=200>
-    <img src="mockup/dark/2_screenshot.png" width=200>
-    <img src="mockup/dark/3_screenshot.png" width=200>
-    <img src="mockup/dark/4_screenshot.png" width=200>
-    <img src="mockup/dark/5_screenshot.png" width=200>
-    <img src="mockup/dark/6_screenshot.png" width=200>
-    <img src="mockup/dark/7_screenshot.png" width=200>
-    <img src="mockup/dark/8_screenshot.png" width=200>
-</p>
+The `tempo`, `play` and `notquitemy` variants remain available. Original Tempo
+README: [docs/TEMPO-UPSTREAM.md](docs/TEMPO-UPSTREAM.md).
 
-## License
+## Credits and licensing
 
-Tempo is released under the [GNU General Public License v3.0](LICENSE). Feel free to modify, distribute, and use the app in accordance with the terms of the license. Contributions to the project are also welcome. 
+[Tempo](https://github.com/CappielloAntonio/tempo) and
+[Spotui](https://github.com/Spotui/Spotui) are GPL-3.0 projects; their license files
+and notices are preserved. The port adapts Spotui's home layout, colors and
+navigation glyphs, and uses Tempo's Inter fonts. Spotui's Spotify-extracted fonts
+and Spotify logos remain only in the excluded upstream snapshot; they are not
+copied into the built J-Pod app. See [provenance](docs/SPOTUI-INTEGRATION.md).

@@ -28,6 +28,13 @@ android {
     flavorDimensions += "default"
 
     productFlavors {
+        jpod {
+            dimension = "default"
+            applicationId 'com.jn90z.jpod'
+            versionCode 27
+            versionNameSuffix '-jpod-preview'
+        }
+
         tempo {
             dimension = "default"
             applicationId 'com.cappielloantonio.tempo'
@@ -65,12 +72,40 @@ android {
     buildFeatures {
         viewBinding true
         buildConfig true
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.15'
+    }
+
+    lint {
+        // Only errors in byte-identical upstream Tempo files are baselined.
+        // New J-Pod errors still fail CI; warnings remain visible in reports.
+        baseline = file('lint-baseline.xml')
+    }
+
+    // Keep Tempo's complete MediaLibraryService / Android Auto implementation.
+    // J-Pod supplies its own screens and branding over this existing foundation.
+    sourceSets {
+        jpod.java.srcDirs += ['src/tempo/java']
     }
 
     namespace 'com.cappielloantonio.tempo'
 }
 
 dependencies {
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:5.0.0-alpha.14'
+
+    implementation platform('androidx.compose:compose-bom:2024.06.00')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.foundation:foundation'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.runtime:runtime-livedata'
+    jpodImplementation 'androidx.media3:media3-cast:1.5.1'
     implementation files('../libs/lib-decoder-ffmpeg-release.aar')
 
     // AndroidX

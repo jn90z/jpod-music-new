@@ -300,6 +300,10 @@
             android:id="@+id/action_indexFragment_to_directoryFragment"
             app:destination="@id/directoryFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/jpodBrowseFragment"
+        android:name="com.cappielloantonio.tempo.ui.jpod.JpodBrowseFragment"
+        android:label="Library browser" />
     <dialog
         android:id="@+id/songBottomSheetDialog"
         android:name="com.cappielloantonio.tempo.ui.fragment.bottomsheetdialog.SongBottomSheetDialog"

@@ -1,0 +1,40 @@
+name: J-Pod preview APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/spotui-navidrome]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Install Android SDK packages
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Build preview
+        run: bash ./gradlew :app:assembleJpodDebug :app:lintJpodDebug :app:testJpodDebugUnitTest
+      - name: Check provider isolation
+        run: python3 scripts/verify_jpod_apk.py app/build/outputs/apk/jpod/debug/app-jpod-debug.apk
+      - name: Upload lint report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jpod-lint-report
+          path: app/build/reports/lint-results-jpodDebug.*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jpod-debug-apk
+          path: app/build/outputs/apk/jpod/debug/app-jpod-debug.apk

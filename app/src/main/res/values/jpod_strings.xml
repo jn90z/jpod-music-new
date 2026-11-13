@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string translatable="false" name="jpod_profile">Open server and profile settings</string>
+    <string translatable="false" name="jpod_for_you">For you</string>
+    <string translatable="false" name="jpod_explore">Explore</string>
+    <string translatable="false" name="jpod_music">Music</string>
+    <string translatable="false" name="jpod_history">History</string>
+    <string translatable="false" name="jpod_refresh">Refresh library</string>
+    <string translatable="false" name="jpod_your_music">Your music. Your J-Pod.</string>
+    <string translatable="false" name="jpod_server_caption">From your personal music library</string>
+    <string translatable="false" name="jpod_liked_songs">Liked songs</string>
+    <string translatable="false" name="jpod_downloads">Downloads</string>
+    <string translatable="false" name="jpod_pinned_playlists">Your pinned playlists</string>
+    <string translatable="false" name="jpod_playlist">Playlist</string>
+    <string translatable="false" name="jpod_artist">Artist</string>
+    <string translatable="false" name="jpod_jump_back_in">Jump back in</string>
+    <string translatable="false" name="jpod_recently_added">Recently added</string>
+    <string translatable="false" name="jpod_on_repeat">On repeat</string>
+    <string translatable="false" name="jpod_favorite_artists">Your favorite artists</string>
+    <string translatable="false" name="jpod_rediscover">Rediscover your music</string>
+    <string translatable="false" name="jpod_empty_title">Bring your library home</string>
+    <string translatable="false" name="jpod_empty_body">Your music will appear here when your server responds. If this stays empty, check that Navidrome has scanned your music and that Tailscale is connected, then refresh. Downloads remain available offline.</string>
+    <string name="jpod_artists" translatable="false">Artists</string>
+    <string name="jpod_songs" translatable="false">Songs</string>
+    <string name="jpod_back" translatable="false">Back</string>
+    <string name="jpod_reload" translatable="false">Refresh</string>
+    <string name="jpod_clear" translatable="false">Clear</string>
+    <string name="jpod_retry" translatable="false">Try again</string>
+    <string name="jpod_search_artists" translatable="false">Search artists</string>
+    <string name="jpod_search_songs" translatable="false">Search titles, artists, or albums</string>
+    <string name="jpod_loading_library" translatable="false">Loading your library… You can browse songs as they arrive.</string>
+    <string name="jpod_browse_failed" translatable="false">Could not finish loading. This list may be incomplete. Check Navidrome and Tailscale, then try again.</string>
+    <string name="jpod_no_matches" translatable="false">No matches. Try another search.</string>
+    <string name="jpod_empty_library" translatable="false">No music found in this list.</string>
+    <plurals name="jpod_artist_count" translatable="false">
+        <item quantity="one">%d artist</item><item quantity="other">%d artists</item>
+    </plurals>
+    <plurals name="jpod_song_count" translatable="false">
+        <item quantity="one">%d song</item><item quantity="other">%d songs</item>
+    </plurals>
+</resources>
