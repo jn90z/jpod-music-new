@@ -89,7 +89,9 @@ class JpodHomeFragment : Fragment() {
                 surface = Background, onSurface = Color.White, onBackground = Color.White
             )) {
                 ProvideTextStyle(LocalTextStyle.current.copy(fontFamily = Inter)) {
-                    Feed(recent, added, frequent, artists, songs, playlists)
+                    CompositionLocalProvider(LocalContentColor provides Color.White) {
+                        Feed(recent, added, frequent, artists, songs, playlists)
+                    }
                 }
             }
         }
@@ -172,6 +174,14 @@ class JpodHomeFragment : Fragment() {
                         Shortcut(stringResource(R.string.jpod_liked_songs), Modifier.weight(1f), Color(0xFF5038A0)) { likedSongs() }
                         Shortcut(stringResource(R.string.jpod_downloads), Modifier.weight(1f), Color(0xFF17684B)) { navigate(R.id.downloadFragment) }
                     }
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Shortcut(stringResource(R.string.jpod_artists), Modifier.weight(1f), Color(0xFF285A80), "♫") {
+                            navigate(R.id.jpodBrowseFragment, Bundle().apply { putString(JpodBrowseFragment.MODE, JpodBrowseFragment.ARTISTS) })
+                        }
+                        Shortcut(stringResource(R.string.jpod_songs), Modifier.weight(1f), Color(0xFF87512D), "♪") {
+                            navigate(R.id.jpodBrowseFragment)
+                        }
+                    }
                     recent.orEmpty().take(6).chunked(2).forEach { row ->
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             row.forEach { value ->
@@ -245,11 +255,11 @@ private fun Pill(label: String, selected: Boolean = false, onClick: () -> Unit) 
 }
 
 @Composable
-private fun Shortcut(title: String, modifier: Modifier, tint: Color, onClick: () -> Unit) {
+private fun Shortcut(title: String, modifier: Modifier, tint: Color, symbol: String? = null, onClick: () -> Unit) {
     Row(modifier.clip(RoundedCornerShape(4.dp)).background(Tile).clickable(onClick = onClick),
         verticalAlignment = Alignment.CenterVertically) {
         Box(Modifier.size(56.dp).background(tint), contentAlignment = Alignment.Center) {
-            Text(if (tint == Color(0xFF5038A0)) "♥" else "↓", color = Color.White, fontSize = 26.sp)
+            Text(symbol ?: if (tint == Color(0xFF5038A0)) "♥" else "↓", color = Color.White, fontSize = 26.sp)
         }
         Text(title, Modifier.padding(8.dp), maxLines = 2, fontSize = 12.sp, fontWeight = FontWeight.Bold)
     }

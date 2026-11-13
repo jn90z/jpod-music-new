@@ -20,4 +20,22 @@
     <string translatable="false" name="jpod_rediscover">Rediscover your music</string>
     <string translatable="false" name="jpod_empty_title">Bring your library home</string>
     <string translatable="false" name="jpod_empty_body">Your music will appear here when your server responds. If this stays empty, check that Navidrome has scanned your music and that Tailscale is connected, then refresh. Downloads remain available offline.</string>
+    <string name="jpod_artists" translatable="false">Artists</string>
+    <string name="jpod_songs" translatable="false">Songs</string>
+    <string name="jpod_back" translatable="false">Back</string>
+    <string name="jpod_reload" translatable="false">Refresh</string>
+    <string name="jpod_clear" translatable="false">Clear</string>
+    <string name="jpod_retry" translatable="false">Try again</string>
+    <string name="jpod_search_artists" translatable="false">Search artists</string>
+    <string name="jpod_search_songs" translatable="false">Search titles, artists, or albums</string>
+    <string name="jpod_loading_library" translatable="false">Loading your library… You can browse songs as they arrive.</string>
+    <string name="jpod_browse_failed" translatable="false">Could not finish loading. This list may be incomplete. Check Navidrome and Tailscale, then try again.</string>
+    <string name="jpod_no_matches" translatable="false">No matches. Try another search.</string>
+    <string name="jpod_empty_library" translatable="false">No music found in this list.</string>
+    <plurals name="jpod_artist_count" translatable="false">
+        <item quantity="one">%d artist</item><item quantity="other">%d artists</item>
+    </plurals>
+    <plurals name="jpod_song_count" translatable="false">
+        <item quantity="one">%d song</item><item quantity="other">%d songs</item>
+    </plurals>
 </resources>

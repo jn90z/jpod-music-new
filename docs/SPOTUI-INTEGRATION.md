@@ -39,8 +39,8 @@ exist; J-Pod intentionally uses the dark palette in either theme setting.
 | Home feed, shortcuts, album carousels | Tempo recent/newest/frequent albums, pinned playlists, favorite artists, random library tracks | New Compose layout adapted from Spotui |
 | Home / Search / Library navigation | Tempo Navigation component, with a fourth Downloads destination | Spotui glyphs and appearance |
 | Account/profile | Navidrome login and Tempo server settings; avatar initial opens settings | Tempo login/settings retained |
-| Albums and artists | Navidrome IDs and Tempo detail/catalogue screens | Themed Tempo UI; Compose port pending |
-| Search | Navidrome `search3` through Tempo | Themed Tempo UI; Compose port pending |
+| Albums and artists | Navidrome IDs, searchable full Artists list → all artist songs; Tempo album detail screens retained | New Compose Artists / artist-song browser; remaining detail UI pending |
+| Search | Interactive local search above Artists and Songs lists; Tempo global search retained | New Compose browse filters; global search still Tempo |
 | Liked songs / saved albums / artists | Navidrome starred items through Tempo | Home shortcut; themed Tempo screens |
 | Playlist creation, editing, add/remove songs | Tempo playlist repository and dialogs, synced to Navidrome | Themed Tempo UI; Compose port pending |
 | Now playing / mini player / seek / shuffle / repeat | Existing Tempo Media3 session and controls | Rounded mini player, Spotui transport glyphs, white play button; full layout port pending |
@@ -115,3 +115,37 @@ Validated in the development environment:
 - `apksigner verify`: passed; package ID `com.jn90z.jpod`, label `J-Pod`, min API 24.
 - All 284 files in the Spotui snapshot match the pinned upstream commit.
 - No device/emulator interaction or live Navidrome/Tailscale streaming test was performed.
+
+## Searchable catalogue browsers
+
+Home now includes Artists and Songs shortcuts. Both use a pinned search field,
+alphabetical lists and live filtering; artist-song pages also have a search field.
+Artists come from the complete `getArtists` index, and selecting one fetches
+`getArtist` and every referenced album's `getAlbum` tracks (four requests at a
+time maximum). This avoids the capped `getTopSongs` endpoint.
+
+Songs enumerates Navidrome's catalogue using empty-query `search3`, requesting
+500 records per page with `songOffset`. It continues until the server returns an
+empty page, including when server-side caps make pages shorter than requested.
+Duplicate IDs are removed; repeated pages are treated as an error, preventing
+infinite loading on a server that ignores offsets. Partial results remain
+playable when a request fails, with an explicit incomplete-list message and Retry.
+
+Search matches artist names, or song title/artist/album, ignoring case and outer
+whitespace. Filtering and sorting run off the main thread. A song tap starts
+Tempo's queue at the selected position in the filtered list, applying its existing
+rating filter. Long-press opens the existing song actions. View-model state and
+saved search/scroll state survive normal view recreation; network work is
+cancelled when its navigation entry is removed.
+
+Regression tests cover authenticated pagination, more than 500 songs, short
+pages, servers ignoring offsets, Subsonic/HTTP errors, fetching all artist albums,
+deduplication, artist groups, search matching and clearing. These use a mock HTTP
+server; private-server/device testing is still required. The inherited lint
+baseline is unchanged. GitHub CI now runs the catalogue unit tests too.
+
+Catalogue update validation: `assembleJpodDebug`, `lintJpodDebug`, and
+`testJpodDebugUnitTest` passed; all 10 unit tests passed, with zero new lint errors.
+Provider isolation (19 DEX files) and APK signature checks also passed. The J-Pod
+preview version code is now 27. Live private-server and phone UI tests remain
+outside this environment's validation.

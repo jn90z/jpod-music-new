@@ -11,6 +11,21 @@ use Tempo's functional screens with a shared J-Pod dark/green theme. The Explore
 home tab preserves Tempo's richer discovery, history and playlist actions while
 those screens are ported. See [the feature map](docs/SPOTUI-INTEGRATION.md).
 
+## Browse Artists and Songs
+
+On **Home → For you**, use the **Artists** and **Songs** buttons:
+
+- **Artists** shows an alphabetical list with a search bar pinned at the top.
+  Tap an artist to see song titles from all their albums, with another search bar.
+- **Songs** shows the complete song catalogue, loaded in pages. Search filters
+  titles, artist names and album names as you type; Clear restores the full list.
+- Tap a song to play it and continue through the visible list. Long-press for
+  existing song actions. Refresh reloads the catalogue. Loading progress and
+  incomplete-list errors are shown explicitly.
+
+Filtering runs locally off the UI thread; typing does not send a request for each
+keystroke. Lists render only visible rows to support large libraries.
+
 ## Build and install
 
 Requires JDK 17 (or 21), Android SDK platform 35 and build tools 35.0.0.
