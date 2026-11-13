@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.media3.common.util.UnstableApi;
 
 import com.cappielloantonio.tempo.R;
+import com.cappielloantonio.tempo.BuildConfig;
+import com.cappielloantonio.tempo.ui.jpod.JpodHomeFragment;
 import com.cappielloantonio.tempo.databinding.FragmentHomeBinding;
 import com.cappielloantonio.tempo.ui.activity.MainActivity;
 import com.cappielloantonio.tempo.ui.fragment.pager.HomePager;
@@ -80,7 +82,12 @@ public class HomeFragment extends Fragment {
     private void initHomePager() {
         HomePager pager = new HomePager(this);
 
-        pager.addFragment(new HomeTabMusicFragment(), "Music", R.drawable.ic_home);
+        if (BuildConfig.FLAVOR.equals("jpod")) {
+            pager.addFragment(new JpodHomeFragment(), getString(R.string.jpod_for_you), R.drawable.ic_home);
+            pager.addFragment(new HomeTabMusicFragment(), getString(R.string.jpod_explore), R.drawable.ic_home);
+        } else {
+            pager.addFragment(new HomeTabMusicFragment(), "Music", R.drawable.ic_home);
+        }
 
         if (Preferences.isPodcastSectionVisible())
             pager.addFragment(new HomeTabPodcastFragment(), "Podcast", R.drawable.ic_graphic_eq);
@@ -99,6 +106,6 @@ public class HomeFragment extends Fragment {
                 }
         ).attach();
 
-        tabLayout.setVisibility(Preferences.isPodcastSectionVisible() || Preferences.isRadioSectionVisible() ? View.VISIBLE : View.GONE);
+        tabLayout.setVisibility(BuildConfig.FLAVOR.equals("jpod") || Preferences.isPodcastSectionVisible() || Preferences.isRadioSectionVisible() ? View.VISIBLE : View.GONE);
     }
 }

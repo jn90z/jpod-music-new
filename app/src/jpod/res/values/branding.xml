@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">J-Pod</string>
+    <string name="menu_library_label">Your Library</string>
+    <string name="jpod_search" translatable="false">Search</string>
+    <style name="JpodBottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@style/JpodNavigationIndicator</item>
+        <item name="itemIconTint">@color/jpod_navigation</item>
+        <item name="itemTextColor">@color/jpod_navigation</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="android:background">#0B0B0F</item>
+    </style>
+    <style name="JpodNavigationIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+</resources>

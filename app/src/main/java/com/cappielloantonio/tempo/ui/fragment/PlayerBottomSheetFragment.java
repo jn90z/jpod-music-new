@@ -22,6 +22,7 @@ import androidx.media3.session.SessionToken;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.cappielloantonio.tempo.R;
+import com.cappielloantonio.tempo.BuildConfig;
 import com.cappielloantonio.tempo.databinding.FragmentPlayerBottomSheetBinding;
 import com.cappielloantonio.tempo.glide.CustomGlideRequest;
 import com.cappielloantonio.tempo.service.MediaManager;
@@ -87,7 +88,12 @@ public class PlayerBottomSheetFragment extends Fragment {
     }
 
     private void customizeBottomSheetBackground() {
-        bind.playerHeaderLayout.getRoot().setBackgroundColor(SurfaceColors.getColorForElevation(requireContext(), 8));
+        if (BuildConfig.FLAVOR.equals("jpod")) {
+            bind.playerHeaderLayout.getRoot().setBackgroundResource(R.drawable.jpod_miniplayer_background);
+            bind.playerHeaderLayout.getRoot().setClipToOutline(true);
+        } else {
+            bind.playerHeaderLayout.getRoot().setBackgroundColor(SurfaceColors.getColorForElevation(requireContext(), 8));
+        }
     }
 
     private void customizeBottomSheetAction() {
